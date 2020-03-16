@@ -11,11 +11,11 @@ except:
 
 
 setup(
-    name='netbox-firewall-policy',
+    name='netbox-example-plugin',
     version='1.0.0',
     description='This plugin is a test',
     long_description=long_description,
-    url='https://github.com/lampwins/netbox-firewall-policy',
+    url='https://github.com/lampwins/example_plugin',
     author='John Anderson',
     author_email='lampwins@gmail.com',
     license='Apache Software License',
@@ -23,8 +23,7 @@ setup(
     install_requires=[],
     packages=find_packages(exclude=['tests', 'tests.*']),
     include_package_data=True,
-    entry_points="""
-[netbox.plugin]
-netbox_firewall_policy=netbox_firewall_policy:NetBoxPluginMeta
-""",
+    entry_points={
+        'netbox.plugin': 'netbox_example_plugin=netbox_example_plugin:NetBoxPluginMeta'
+    }
 )
