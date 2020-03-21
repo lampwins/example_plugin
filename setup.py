@@ -19,11 +19,10 @@ setup(
     author='John Anderson',
     author_email='lampwins@gmail.com',
     license='Apache Software License',
-
     install_requires=[],
     packages=find_packages(exclude=['tests', 'tests.*']),
     include_package_data=True,
     entry_points={
-        'netbox.plugin': 'netbox_example_plugin=netbox_example_plugin:NetBoxPluginMeta'
+        'netbox_plugins': 'netbox_example_plugin=netbox_example_plugin:PluginAppConfig'
     }
 )
